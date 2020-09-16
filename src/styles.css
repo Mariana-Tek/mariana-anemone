@@ -1,0 +1,78 @@
+/* 
+ * GLOBAL VARIABLES
+ */
+
+:root {
+    --color-text: #31393B;
+
+    --color-primary-dark: #00656B;
+
+    --color-shade-0: #FFFFFF;
+    --color-shade-1: #FAFBFC;
+    --color-shade-2: #EDF0F2;
+    --color-shade-3: #D7D9DB;
+    --color-shade-4: #BABEC2;
+    --color-shade-5: #000000;
+
+    --unit: 4px;
+
+    --border-default: 1px solid var(--color-shade-3);
+
+    --border-radius-default: var(--unit);
+}
+
+/* 
+ * RESET
+ */
+
+body {
+    color: var(--color-text);
+    font-family: Avenir, Segoe UI, Roboto, Helvetica Neue, Ubuntu, sans-serif;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+/* 
+ * COMPONENTS
+ */
+
+
+/* buttons */
+
+.button {
+    background-color: transparent;
+    border: var(--border-default);
+    border-radius: var(--border-radius-default);
+    padding: .5em 1em;
+}
+
+.button--primary {
+    background-color: var(--color-primary-dark);
+    border: none;
+    color: var(--color-shade-0);
+}
+
+.class-session {
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    margin-block-end: .5em;
+}
+
+
+/* class session */
+
+.class-session__info {
+    width: 20%;
+}
+
+.class-session__date {
+    width: 20%;
+}
+
+.class-session__action {
+    width: 20%;
+}

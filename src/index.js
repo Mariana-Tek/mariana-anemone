@@ -59,7 +59,7 @@ function redirect() {
       },
     });
 
-    window.xprops.redirect(redirectUri);
+    window.xprops.actions.redirect(redirectUri);
   }
 
 window.addEventListener("DOMContentLoaded", async () => {
