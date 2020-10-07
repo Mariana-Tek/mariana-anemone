@@ -18,7 +18,7 @@ function ClassSession({ session }) {
       </div>
 
       <button
-        onClick={() => window.xprops.actions.goToClass(session.id)}
+        onClick={() => window.xprops.navigation.goToClass(session.id)}
         className='class-session__button button button--primary'
       >
         View

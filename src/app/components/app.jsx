@@ -2,19 +2,18 @@ import React, { useEffect, useState } from "react";
 import ClassSession from "./class-session";
 import Axios from "axios";
 
-const { access_token } = JSON.parse(
-  localStorage.getItem("mariana-auth-session")
-);
-const axios = Axios.create({
-  baseURL: "https://cousteau-r45kxk.marianatek.com/api",
-  headers: { Authorization: `Bearer ${access_token}` },
-});
+const clientId = 'OZ8OSfW34FMJJHIWXmbZMcWNpLKu4EhY7r5lvJPM';
 
 function App() {
   const [data, setData] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
+      const token = await window.xprops.auth.getToken(clientId);
+      const axios = Axios.create({
+        baseURL: "http://localhost:5000/api",
+        headers: { Authorization: `Bearer ${token}` },
+      });
       const user = await axios("/users/self");
       const employee = await axios(`/employees?user=${user.data.data.id}`);
       const classSessions = await axios(
