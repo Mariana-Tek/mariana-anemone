@@ -1,4 +1,4 @@
-import marianaAnemone from "./mariana-anemone";
+import marianaAnemone from "../../src/mariana-anemone";
 
 const config = {
     appId: 'new',
