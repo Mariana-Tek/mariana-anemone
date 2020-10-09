@@ -1,13 +1,9 @@
 import marianaAnemone from "../..";
 
 const config = {
-    appId: 'new',
-    clientId: 'OZ8OSfW34FMJJHIWXmbZMcWNpLKu4EhY7r5lvJPM',
-    baseUrl: 'http://localhost:1234/'
+    appId: "{MARIANA_APP_ID}",
+    clientId: "{MARIANA_CLIENT_ID}",
+    baseUrl: "{APP_URL}",
 };
 
-export const mariana = marianaAnemone.initialize(config)
-
-
-
-
+export const mariana = marianaAnemone.initialize(config);

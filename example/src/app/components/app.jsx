@@ -4,34 +4,32 @@ import Axios from "axios";
 import { mariana } from "../../utils";
 
 function App() {
-  const [data, setData] = useState(null);
+    const [data, setData] = useState(null);
 
-  useEffect(() => {
-    async function fetchData() {
-      const token = await mariana.auth.getToken();
-      const axios = Axios.create({
-        baseURL: "http://localhost:5000/api",
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      const user = await axios("/users/self");
-      const employee = await axios(`/employees?user=${user.data.data.id}`);
-      const classSessions = await axios(
-        `/class_sessions?employee_public_profiles=${employee.data.data[0].id}`
-      );
+    useEffect(() => {
+        async function fetchData() {
+            const token = await mariana.auth.getToken();
+            const axios = Axios.create({
+                baseURL: "http://localhost:5000/api",
+                headers: { Authorization: `Bearer ${token}` },
+            });
+            const user = await axios("/users/self");
+            const employee = await axios(`/employees?user=${user.data.data.id}`);
+            const classSessions = await axios(`/class_sessions?employee_public_profiles=${employee.data.data[0].id}`);
 
-      setData(classSessions.data.data);
-    }
+            setData(classSessions.data.data);
+        }
 
-    fetchData();
-  }, []);
+        fetchData();
+    }, []);
 
-  if (!data) return <p>Loading...</p>;
+    if (!data) return <p>Loading...</p>;
 
-  const classSessionListItems = data.map(({ attributes: session, id }) => (
-    <ClassSession key={id} session={{ id, ...session }} />
-  ));
+    const classSessionListItems = data.map(({ attributes: session, id }) => (
+        <ClassSession key={id} session={{ id, ...session }} />
+    ));
 
-  return <ul>{classSessionListItems}</ul>;
+    return <ul>{classSessionListItems}</ul>;
 }
 
 export default App;

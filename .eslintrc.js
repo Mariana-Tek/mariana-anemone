@@ -8,6 +8,7 @@ module.exports = {
         'indent': ['error', 4]
     },
     globals: {
-        window: true
+        window: true,
+        document: true,
     }
 };
