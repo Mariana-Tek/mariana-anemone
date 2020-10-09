@@ -13,10 +13,16 @@
     "last 3 ios_saf versions",
     "last 3 safari versions"
   ],
+  "files": [
+    "index.js"
+  ],
   "dependencies": {
     "zoid": "9.0.57"
   },
   "devDependencies": {
-    "prettier": "^2.1.1"
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2"
   }
 }

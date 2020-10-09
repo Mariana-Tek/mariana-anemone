@@ -1,4 +1,4 @@
-import marianaAnemone from "../../src/mariana-anemone";
+import marianaAnemone from "../..";
 
 const config = {
     appId: 'new',
@@ -6,4 +6,8 @@ const config = {
     baseUrl: 'http://localhost:1234/'
 };
 
-export const mariana = marianaAnemone.initialize(config);
+export const mariana = marianaAnemone.initialize(config)
+
+
+
+

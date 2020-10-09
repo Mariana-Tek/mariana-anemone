@@ -1,35 +1,35 @@
-import * as zoid from 'zoid/dist/zoid.js';
+import { create } from "zoid/dist/zoid.js";
 
 const redirect = (url) => {
     return window.xprops.navigation.redirect(url);
-}
+};
 
 const goToClass = (classId) => {
     return window.xprops.navigation.goToClass(classId);
-}
+};
 
 const goToProfile = (userId) => {
     return window.xprops.navigation.goToProfile(userId);
-}
+};
 
 const initialize = (config) => {
-    if (!config) throw new Error('A config object is required');
+    if (!config) throw new Error("A config object is required");
 
     const { appId, clientId, baseUrl } = config;
 
-    if (!appId) throw new Error('An appId is required');
-    if (!clientId) throw new Error('A clientId is required');
-    if (!baseUrl) throw new Error('A baseUrl is required');
+    if (!appId) throw new Error("An appId is required");
+    if (!clientId) throw new Error("A clientId is required");
+    if (!baseUrl) throw new Error("A baseUrl is required");
 
     const createComponent = () => {
-        zoid.create({
+        create({
             tag: appId,
-            url: baseUrl
-        })
-    }
+            url: baseUrl,
+        });
+    };
 
     const getToken = () => {
-        return window.xprops.auth.getToken(clientId)
+        return window.xprops.auth.getToken(clientId);
     };
 
     return {
@@ -39,11 +39,8 @@ const initialize = (config) => {
             redirect,
             goToClass,
             goToProfile,
-        }
+        },
     };
-}
+};
 
 export default { initialize };
-
-
-
