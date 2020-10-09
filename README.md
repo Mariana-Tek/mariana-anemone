@@ -1,34 +1,35 @@
-# third-party-example
+# Mariana Anemone
+An SDK for building Embedded Apps with Mariana Tek.
 
-Empty project.
+## Installation
 
-## Building and running on localhost
+Coming soon
 
-First install dependencies:
+## Documentation
 
-```sh
+Coming soon
+
+## Running the example app
+*Note:* This example application will only function when loaded within a sandbox for the Mariana Tek Admin Application where a test Embedded App is installed. If you 
+have an idea for a new Embedded App and don't have a sandbox or a test Embedded App installed yet, contact <partners@marianatek.com>.
+
+1. Go to the root of the example app and install dependencies:
+```
+cd example
 npm install
 ```
 
-To run in hot module reloading mode:
+2. Update the value of `config` in example/src/utils.js with the correct values for your app:
+```
+const config = {
+    appId: "{MARIANA_APP_ID}", // the app ID configured for your app
+    clientId: "{MARIANA_CLIENT_ID}", // the sandbox client ID for your app
+    baseUrl: "{APP_URL}", // when running this locally, this should be http://localhost:1234
+};
+```
 
-```sh
+3. Spin up the application:
+```
 npm start
 ```
-
-To create a production build:
-
-```sh
-npm run build-prod
-```
-
-## Running
-
-```sh
-node dist/bundle.js
-```
-
-## Credits
-
-Made with [createapp.dev](https://createapp.dev/)
 
