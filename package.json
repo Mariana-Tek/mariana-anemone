@@ -13,6 +13,9 @@
     "last 3 ios_saf versions",
     "last 3 safari versions"
   ],
+  "scripts": {
+    "test": "jest"
+  },
   "files": [
     "index.js"
   ],
@@ -23,6 +26,8 @@
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.1.2"
+    "prettier": "^2.1.2",
+    "jest": "^26.5.2",
+    "eslint-plugin-jest": "^23.18.0"
   }
 }

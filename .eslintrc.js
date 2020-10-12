@@ -1,5 +1,8 @@
 module.exports = {
-    extends: ["eslint:recommended", "plugin:prettier/recommended"],
+    extends: ["eslint:recommended", "plugin:prettier/recommended", "plugin:jest/recommended",],
+    env: {
+        jest: true,
+    },
     parserOptions: {
         ecmaVersion: 2018,
         sourceType: "module",
@@ -10,5 +13,6 @@ module.exports = {
     globals: {
         window: true,
         document: true,
+        module: true,
     }
 };
