@@ -12,11 +12,7 @@ const goToProfile = (userId) => {
     return window.xprops.navigation.goToProfile(userId);
 };
 
-const initialize = (config) => {
-    if (!config) throw new Error("A config object is required");
-
-    const { appId, clientId, baseUrl } = config;
-
+const initialize = (appId, clientId, baseUrl) => {
     if (!appId) throw new Error("An appId is required");
     if (!clientId) throw new Error("A clientId is required");
     if (!baseUrl) throw new Error("A baseUrl is required");
