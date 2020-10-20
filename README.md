@@ -3,14 +3,18 @@ An SDK for building Embedded Apps with Mariana Tek.
 
 ## Installation
 
-Coming soon
+```npm install @mariana-tek/anemone```
 
 ## Documentation
 
 Full reference: https://marianatek.com/developers/guides/mariana-anemone
 
+## Running tests
+
+```npm test```
+
 ## Running the example app
-*Note:* This example application will only function when loaded within a sandbox for the Mariana Tek Admin Application where a test Embedded App is installed. If you 
+**Note:** This example application will only function when loaded within a sandbox for the Mariana Tek Admin Application where a this test Embedded App is installed. If you 
 have an idea for a new Embedded App and don't have a sandbox or a test Embedded App installed yet, contact <partners@marianatek.com>.
 
 1. Go to the root of the example app and install dependencies:

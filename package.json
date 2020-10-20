@@ -1,12 +1,23 @@
 {
-  "name": "mariana-anemone",
+  "name": "@mariana-tek/anemone",
   "version": "1.0.0",
   "description": "Mariana Tek Embedded Apps SDK",
-  "repository": "https://github.com/Mariana-Tek/mariana-anemone",
+  "homepage": "https://github.com/Mariana-Tek/mariana-anemone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mariana-Tek/mariana-anemone"
+  },
+  "bugs": {
+    "url": "https://github.com/Mariana-Tek/mariana-anemone/issues",
+    "email": "integrations@marianatek.com"
+  },
   "main": "index.js",
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "Mariana",
+    "Anemone"
+  ],  "author": "Mariana Tek <integrations@marianatek.com> (marianatek.com)",
   "license": "MIT",
+  "private": false,
   "scripts": {
     "test": "jest"
   },
