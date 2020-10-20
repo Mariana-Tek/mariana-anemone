@@ -1,9 +1,9 @@
 import marianaAnemone from "../..";
 
 const config = {
-    appId: "{MARIANA_APP_ID}", // the app ID configured for your app
-    clientId: "{MARIANA_CLIENT_ID}", // the sandbox client ID for your app
-    baseUrl: "{APP_URL}", // when running this locally, this should be http://localhost:1234
+    appId: "example-app-local-dev", // the app ID configured for your app
+    clientId: "example_app_local_client_id", // the sandbox client ID for your app
+    baseUrl: "http://localhost:1234", // the url for this app when running locally
 };
 
 export const mariana = marianaAnemone.initialize(config.appId, config.clientId, config.baseUrl);

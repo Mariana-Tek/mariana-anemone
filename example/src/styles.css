@@ -1,4 +1,4 @@
-/* 
+/*
  * GLOBAL VARIABLES
  */
 
@@ -21,7 +21,7 @@
     --border-radius-default: var(--unit);
 }
 
-/* 
+/*
  * RESET
  */
 
@@ -35,7 +35,15 @@ button {
     font-size: inherit;
 }
 
-/* 
+.type-title-1 {
+    font-family: inherit;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: calc(44 / 36);
+}
+
+/*
  * COMPONENTS
  */
 

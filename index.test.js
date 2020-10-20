@@ -11,6 +11,9 @@ afterEach(() => {
 });
 
 const mockXprops = {
+    api: {
+        baseUrl: "https://example.sandbox.marianatek.com/",
+    },
     auth: {
         getToken: jest.fn(),
     },
@@ -69,6 +72,23 @@ describe("createComponent", () => {
     });
 });
 
+describe("api", () => {
+    const mariana = marianaAnemone.initialize("app_id", "client_id", "http://localhost:1234");
+
+    test("getApiBaseUrl returns value from xprops", () => {
+        window.xprops = mockXprops;
+        const apiBase = mariana.api.getApiBaseUrl();
+
+        expect(apiBase).toBe(window.xprops.api.baseUrl);
+    });
+
+    test("getApiBaseUrl throws without xprops", () => {
+        window.xprops = undefined;
+        expect(() => {
+            mariana.api.getApiBaseUrl();
+        }).toThrow(Error);
+    });
+});
 describe("auth", () => {
     const mariana = marianaAnemone.initialize("app_id", "client_id", "http://localhost:1234");
 

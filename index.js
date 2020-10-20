@@ -24,6 +24,11 @@ const goToProfile = (userId) => {
     return window.xprops.navigation.goToProfile(userId);
 };
 
+const getApiBaseUrl = () => {
+    validateXprops();
+    return window.xprops.api.baseUrl;
+};
+
 const initialize = (appId, clientId, baseUrl) => {
     if (!appId) throw new Error("An appId is required");
     if (!clientId) throw new Error("A clientId is required");
@@ -43,6 +48,7 @@ const initialize = (appId, clientId, baseUrl) => {
 
     return {
         createComponent,
+        api: { getApiBaseUrl },
         auth: { getToken },
         navigation: {
             redirect,
