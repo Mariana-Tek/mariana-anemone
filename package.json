@@ -15,7 +15,8 @@
   "keywords": [
     "Mariana",
     "Anemone"
-  ],  "author": "Mariana Tek <integrations@marianatek.com> (marianatek.com)",
+  ],
+  "author": "Mariana Tek <integrations@marianatek.com> (marianatek.com)",
   "license": "MIT",
   "private": false,
   "scripts": {

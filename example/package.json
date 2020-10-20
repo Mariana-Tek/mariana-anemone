@@ -19,6 +19,7 @@
     "build-prod": "parcel build src/index.html"
   },
   "dependencies": {
+    "@mariana-tek/anemone": "1.0.0",
     "axios": "^0.19.2",
     "axios-hooks": "^2.1.0",
     "client-oauth2": "^4.3.3",

@@ -1,4 +1,4 @@
-import marianaAnemone from "../..";
+import marianaAnemone from "@mariana-tek/anemone";
 
 const config = {
     appId: "example-app-local-dev", // the app ID configured for your app
